@@ -1,0 +1,27 @@
+[
+    {
+        "comment": "I also like computers",
+        "user_id": 2,
+        "post_id": 3
+    },
+    {
+        "comment": "I also like technology",
+        "user_id": 2,
+        "post_id": 1
+    },
+    {
+        "comment": "I am on a laptop",
+        "user_id": 3,
+        "post_id": 4
+    },
+    {
+        "comment": "I am on a desktop",
+        "user_id": 4,
+        "post_id": 3
+    },
+    {
+        "comment": "Test as well",
+        "user_id": 1,
+        "post_id": 2
+    }
+]

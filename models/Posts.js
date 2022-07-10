@@ -18,10 +18,6 @@ Post.init(
     description: {
       type: DataTypes.STRING,
     },
-    image: {
-      type: DataTypes.BLOB,
-      allowNull: false,
-    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {

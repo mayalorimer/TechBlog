@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Tech",
+        "description": "I like technology",
+        "user_id": 1
+    },
+    {
+        "title": "Test",
+        "description": "Testing",
+        "user_id": 2
+    },
+    {
+        "title": "Computer",
+        "description": "Using a computer",
+        "user_id": 1
+    },
+    {
+        "title": "Laptop",
+        "description": "Using a laptop",
+        "user_id": 3
+    }
+]
