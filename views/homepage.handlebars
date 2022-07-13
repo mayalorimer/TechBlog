@@ -1,3 +1,4 @@
+<h1 class="display-1">Tech Blog</h1>
 {{#each posts as |post| }}
 {{!-- <div class="row mb-4 project">
   <div class="col-md-5">
@@ -16,7 +17,7 @@
 
 <div class="card">
     <div class="card-header">
-       <h4><a class="link" href="/post/{{id}}">{{title}}</a></h4>
+       <h4><a class="link" href="api/post/{{id}}">{{title}}</a></h4>
         <p>Posted by {{user.username}}</p>
     </div>
         <p class="card-body">{{description}}</p>
