@@ -1,11 +1,23 @@
 <div class="card">
     <div class="card-header">
        <h4>{{post.title}}</h4>
-        <p>Posted by {{post.user.username}}</p>
+        <p>Posted by {{post.user.username}} on {{post.dateCreated}}</p>
     </div>
         <p class="card-body">{{post.description}}</p>
-    <h6 class="p-2">Comments</h6>
-    {{#each post.comment}}
-    <p class="card-body">{{comment}}</p>
-    {{/each}}
+    <h4>Comments:</h4>
+    <p>{{post.comment.comment}}</p>
+    <ul>
+        {{#each post.comments}}
+        <li class="card-body">{{comment}}</li>
+        {{/each}}
+    </ul>
+<div class="card">
+  <div class="card-header"></div>
+  <form class="card-body" id="new-comment-form">
+    <p class="form-label">Add a comment:</p>
+    <textarea class="form-input" id="comment-body" name="comment-body"></textarea>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
 </div>
+
+<script src="./js/comment.js"></script>
