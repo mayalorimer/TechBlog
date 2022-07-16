@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Posts, User, Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.get('/:id', async (req, res) => {
+router.get('/:id', withAuth, async (req, res) => {
     try {
      const postData = await Posts.findByPk(req.params.id, {
         include: [
@@ -34,7 +34,7 @@ router.get('/:id', async (req, res) => {
   });
 
  // /api/post/post
-  router.post('/post', async (req, res) => {
+  router.post('/post', withAuth, async (req, res) => {
     try {
       const newComment = await Posts.create({
         title: req.body.title,
@@ -49,7 +49,7 @@ router.get('/:id', async (req, res) => {
 
 
   // /api/post/comment
-router.post('/comment', async (req, res) => {
+router.post('/comment', withAuth, async (req, res) => {
   try {
     const newComment = await Comment.create({
       comment: req.body.comment,
@@ -64,7 +64,7 @@ router.post('/comment', async (req, res) => {
 
 
 // /api/post/:id
-router.put('/:id',  async (req, res) => {
+router.put('/:id', withAuth, async (req, res) => {
   console.log(req.params.id, "test");
   try{
     const updatedPost = await Posts.update({

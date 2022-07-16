@@ -1,6 +1,6 @@
 <!-- add an option to add a post -->
 
-<div class="new-post-container">
+<div class="new-post-container" id="new-post-card">
   <div class="home-card">
       <h3 class="card-header">CREATE NEW POST</h3>
       <form class="card-body new-post-form" id="new-post-form">
@@ -24,23 +24,26 @@
 
 
     {{#each posts as |post| }}
-    <div class="card">
-        <div class="card-header">
-          <h4>{{post.title}}</h4>
-        </div>
-        <p class="card-body">{{post.description}}</p>
-    </div>
+    <div class="each-post">
+      <div class="card" id="eachPost">
+          <div class="card-header">
+            <h4>{{post.title}}</h4>
+          </div>
+          <p class="card-body">{{post.description}}</p>
+      </div>
     <div class="col-md-4">
       <button class="btn btn-sm btn-danger delete" data-id="{{post.id}}">DELETE</button>
     </div>
-    <form class="edit-post-form">
-      <input type="hidden" name="post-id" value="{{post.id}}" />
-      <label class="form-label" for="content">New Title: </label>
-      <input name="post-title" class="form-input" id="post-title" />
-      <label class="form-label" for="content">New Description: </label>
-      <input name="content" class="form-input" id="new-content" />
-      <button class="btn btn-sm btn-info editBtn">Edit</button>
-    </form>
+      <form class="edit-post-form">
+        <p class="editing">Edit Post</p>
+        <input type="hidden" name="post-id" value="{{post.id}}" />
+        <label class="form-label" for="content">New Title: </label>
+        <input name="post-title" class="form-input" id="post-title" />
+        <label class="form-label" for="content">New Description: </label>
+        <input name="content" class="form-input" id="new-content" />
+        <button class="btn btn-sm btn-info editBtn">Edit</button>
+      </form>
+    </div>
     {{/each}}
   </div>
 

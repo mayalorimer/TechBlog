@@ -26,8 +26,11 @@ Start the server:
 https://github.com/mayalorimer/TechBlog
 
 ## Application Deployment
+https://dashboard.heroku.com/apps/sleepy-plateau-01947/resources?justInstalledAddonServiceId=88f985cd-2c0e-452f-b755-f381335db573 
 
 ## Application Screenshot
+![screenshot of application](./public/assets/shot2.jpg)
+![screenshot of application](./public/assets/shot.jpg)
 
 ## License
 MIT License
