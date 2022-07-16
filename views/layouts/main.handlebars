@@ -19,10 +19,11 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-item nav-link active" href="/">Home</a>
-                <a class="nav-item nav-link" href="/dashboard">Dashboard</a>
                 {{#if logged_in}}
+                <a class="nav-item nav-link" href="/dashboard">Dashboard</a>
                 <button class="no-button" id="logout">Logout</button>
                 {{else}}
+                <a class="nav-item nav-link" href="/login">Dashboard</a>
                 <a class="nav-item nav-link" href="/login">Login</a>
                 {{/if}}
             </div>

@@ -12,7 +12,7 @@ router.get('/:id', async (req, res) => {
             },
             {
                 model: Comment,
-                attributes: ['id', 'comment', 'post_id', 'user_id'],
+                attributes: ['id', 'comment', 'post_id', 'user_id', 'dateCreated'],
                 include: {
                   model: User,
                   attributes: ['username']
@@ -61,6 +61,8 @@ router.post('/comment', async (req, res) => {
     res.status(400).json(err);
   }
 });
+
+
 
 
 

@@ -6,11 +6,12 @@
         <p class="card-body">{{post.description}}</p>
     <h4>Comments:</h4>
     <p>{{post.comment.comment}}</p>
+    {{log post.comments}}
     <ul>
         {{#each post.comments}}
-        <li class="card-body">{{comment}} / Comment By: {{comment.user_id.username}} on {{comment.dateCreated}}</li>
+
+        <li class="card-body">{{comment}} / Comment By: {{user.username}}, on {{dateCreated}}</li>
         {{/each}}
-        {{log post.comments}}
     </ul>
 <div class="card">
   <div class="card-header"></div>

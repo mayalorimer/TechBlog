@@ -15,7 +15,8 @@ const { User, Posts } = require('../models');
   
       const posts = postData.map((project) => project.get({ plain: true }));
       res.render('homepage', {
-        posts
+        posts,
+        logged_in: req.session.logged_in
       });
     } catch (err) {
       res.status(500).json(err);
@@ -29,11 +30,11 @@ const { User, Posts } = require('../models');
 
 // render the login handlebar page
 router.get('/login', (req, res) => {
-    if (req.session.logged_in) {
+     if (req.session.logged_in) {
       res.redirect('/');
       return;
-    }
-  
+    } 
+
     res.render('login');
   });
 
@@ -55,8 +56,33 @@ router.get('/login', (req, res) => {
 
   router.get('/dashboard', (req, res) => {
     // If the user is already logged in, redirect the request to another route
+  //  if (req.session.logged_in) 
+  //    return;
+  //  }
+    Posts.findAll({
+      where: {
+        user_id: req.session.user_id
+      }
+    })
+      .then(dbPostData => {
+        const posts = dbPostData.map((post) => post.get({ plain: true }));
+        
+        res.render('dashboard', {
+          posts,
+         });
+      })
+      .catch(err => {
+        console.log(err);
+        res.redirect("login");
+      });
+  });
+  //  res.redirect('/');
+  
+
+  router.get('/signUp', (req, res) => {
+    // If the user is already logged in, redirect the request to another route
   //  if (req.session.logged_in) {
-      res.render('dashboard');
+      res.render('signUp');
   //    return;
   //  }
 
