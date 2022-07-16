@@ -65,6 +65,7 @@ router.post('/comment', async (req, res) => {
 
 // /api/post/:id
 router.put('/:id',  async (req, res) => {
+  console.log(req.params.id, "test");
   try{
     const updatedPost = await Posts.update({
       title: req.body.title,
