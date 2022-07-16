@@ -31,10 +31,17 @@
         <p class="card-body">{{post.description}}</p>
     </div>
     <div class="col-md-4">
-      <button class="btn btn-sm btn-info" id="editBtn" data-id="{{post.id}}">Edit</button>
       <button class="btn btn-sm btn-danger delete" data-id="{{post.id}}">DELETE</button>
     </div>
+    <form class="edit-post-form">
+      <label class="form-label" for="content">New Title: </label>
+      <input name="post-title" class="form-input" id="post-title" />
+      <label class="form-label" for="content">New Description: </label>
+      <input name="content" class="form-input" id="content" />
+      <button class="btn btn-sm btn-info" id="editBtn" data-id="{{post.id}}">Edit</button>
+    </form>
     {{/each}}
   </div>
 
 <script src="/js/post.js"></script>
+<script src="/js/editPost.js"></script>
