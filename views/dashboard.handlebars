@@ -12,19 +12,29 @@
           <br/>
           <input name="content" class="form-input" id="descInp" />
           <br/>
-            <button type="submit" class="btn" id="postBtn">POST</button>
+            <button type="submit" class="btn btn-secondary" id="postBtn">POST</button>
           </div>
       </form>
       </br>
   </div>
 </div>
 
-{{#each posts as |post| }}
-<div class="card">
-    <div class="card-header">
-       <h4>{{post.title}}</h4>
+  <div class="col-md-6 project-list">
+    <h3>Current Posts:</h3>
+
+
+    {{#each posts as |post| }}
+    <div class="card">
+        <div class="card-header">
+          <h4>{{post.title}}</h4>
+        </div>
+        <p class="card-body">{{post.description}}</p>
     </div>
-    <p class="card-body">{{post.description}}</p>
-</div>
-{{/each}}
+    <div class="col-md-4">
+      <button class="btn btn-sm btn-info" id="editBtn" data-id="{{post.id}}">Edit</button>
+      <button class="btn btn-sm btn-danger delete" data-id="{{post.id}}">DELETE</button>
+    </div>
+    {{/each}}
+  </div>
+
 <script src="/js/post.js"></script>
