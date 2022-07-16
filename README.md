@@ -29,8 +29,8 @@ https://github.com/mayalorimer/TechBlog
 https://sleepy-plateau-01947.herokuapp.com
 
 ## Application Screenshot
-![screenshot of application](./public/assets/shot2.jpg)
-![screenshot of application](./public/assets/shot.jpg)
+![screenshot of application](./public/css/assets/shot2.jpg)
+![screenshot of application](./public/css/assets/shot.jpg)
 
 ## License
 MIT License
