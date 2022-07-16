@@ -5,14 +5,14 @@ const post_id = document.querySelector('input[name="post-id"]').value;
 const commentFormHandler = async (event) => {
   event.preventDefault();
   console.log(post_id);
-  const commentContent = document.querySelector('textarea[name="comment-body"]').value;
-  console.log(commentContent);
+  const comment = document.querySelector('textarea[name="comment-body"]').value;
+  console.log(comment);
 
-  if(commentContent) {
+  if(comment) {
     const response = await fetch(`/api/post/comment`, {
       method: 'POST',
       body: JSON.stringify({
-        commentContent,
+        comment,
         post_id
       }),
       headers: {
@@ -20,7 +20,7 @@ const commentFormHandler = async (event) => {
       }
     });
     if (response.ok) {
-      document.location.replace(`/posts`);
+      document.location.replace(`/`);
     } else {
       alert(response.statusText);
     }

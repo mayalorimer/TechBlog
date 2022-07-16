@@ -8,8 +8,9 @@
     <p>{{post.comment.comment}}</p>
     <ul>
         {{#each post.comments}}
-        <li class="card-body">{{comment}}</li>
+        <li class="card-body">{{comment}} / Comment By: {{comment.user_id.username}} on {{comment.dateCreated}}</li>
         {{/each}}
+        {{log post.comments}}
     </ul>
 <div class="card">
   <div class="card-header"></div>

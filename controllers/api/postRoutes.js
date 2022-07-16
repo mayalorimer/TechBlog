@@ -33,6 +33,22 @@ router.get('/:id', async (req, res) => {
     }
   });
 
+ // /api/post/post
+  router.post('/post', async (req, res) => {
+    try {
+      const newComment = await Posts.create({
+        title: req.body.title,
+        description: req.body.description,
+        user_id: req.session.user_id
+      });
+      res.status(200).json(newComment);
+    } catch (err) {
+      res.status(400).json(err);
+    }
+  });
+
+
+  // /api/post/comment
 router.post('/comment', async (req, res) => {
   try {
     const newComment = await Comment.create({
