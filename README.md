@@ -26,7 +26,7 @@ Start the server:
 https://github.com/mayalorimer/TechBlog
 
 ## Application Deployment
-https://dashboard.heroku.com/apps/sleepy-plateau-01947/resources?justInstalledAddonServiceId=88f985cd-2c0e-452f-b755-f381335db573 
+https://sleepy-plateau-01947.herokuapp.com
 
 ## Application Screenshot
 ![screenshot of application](./public/assets/shot2.jpg)
