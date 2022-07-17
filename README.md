@@ -26,7 +26,7 @@ Start the server:
 https://github.com/mayalorimer/TechBlog
 
 ## Application Deployment
-https://sleepy-plateau-01947.herokuapp.com
+https://nameless-brushlands-85044.herokuapp.com 
 
 ## Application Screenshot
 ![screenshot of application](./public/css/assets/shot2.jpg)
